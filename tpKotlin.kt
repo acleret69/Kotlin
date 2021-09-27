@@ -1,7 +1,18 @@
 fun main() {
     
-    print(start())
+    val stringList = listOf("a" , "b", "c")
+    
+    print(joinOptions(stringList))
     
 }
 
-fun start() : String = "OK"
+fun joinToString(
+separator: String=", ",
+prefix: String="",
+postfix: String="") : String {
+    
+   return ""
+    
+}
+
+fun joinOptions(options: Collection<String>)=options.joinToString(",","[","]")
