@@ -1,18 +1,10 @@
 fun main() {
     
-    val stringList = listOf("a" , "b", "c")
-    
-    print(joinOptions(stringList))
-    
-}
-
-fun joinToString(
-separator: String=", ",
-prefix: String="",
-postfix: String="") : String {
-    
-   return ""
+    val Ald = Person("Ald",21)
+    print("nom : ${Ald.name} , age : ${Ald.age}")
     
 }
 
-fun joinOptions(options: Collection<String>)=options.joinToString(",","[","]")
+class Person(val name :String, val age :Int ){
+        
+}
