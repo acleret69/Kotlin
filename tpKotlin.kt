@@ -45,7 +45,7 @@ fun Shop.getCitiesCustomersAreFrom() {
 
 fun Shop.getCustomersFrom(city: City){
     customers.filter{it.city == city}.forEach{
-        println(it.name)
+        println(it.name) 
     }
 }
 
