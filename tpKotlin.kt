@@ -11,7 +11,7 @@ fun main() {
     val customerOlga = Customer("Olga", paris, command)
     val shop = Shop("ShopDeOuf", listOf(customerLarisa, customerAlbert, customerOlga))
 	shop.getCitiesCustomersAreFrom()
-    println(shop.getCustomersFrom(paris))
+    shop.getCustomersFrom(paris)
 }
 
 data class Shop(val name: String, val customers:
