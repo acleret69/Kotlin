@@ -12,6 +12,10 @@ fun main() {
     val shop = Shop("ShopDeOuf", listOf(customerLarisa, customerAlbert, customerOlga))
 	shop.getCitiesCustomersAreFrom()
     shop.getCustomersFrom(paris)
+    println(shop.checkAllCustomersAreFrom(paris))
+    println(shop.hasCustomerFrom(paris))
+    println(shop.countCustomersFrom(paris))
+    println(shop.findAnyCustomerFrom(london))
 }
 
 data class Shop(val name: String, val customers:
@@ -44,3 +48,11 @@ fun Shop.getCustomersFrom(city: City){
         println(it.name)
     }
 }
+
+fun Shop.checkAllCustomersAreFrom(city: City): Boolean = customers.all{it.city != city}
+
+fun Shop.hasCustomerFrom(city: City): Boolean = customers.any{it.city == city}
+
+fun Shop.countCustomersFrom(city: City): Int = customers.count{it.city == city}
+
+fun Shop.findAnyCustomerFrom(city: City): Customer? = customers.find{it.city == city}
